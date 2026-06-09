@@ -6,7 +6,7 @@ import StudentDashboard from './components/StudentDashboard';
 import CompanyDashboard from './components/CompanyDashboard';
 import { User, LogOut, Award } from 'lucide-react';
 
-export const API_BASE = 'http://localhost:5000/api';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://final-skill-bridge.onrender.com/api';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('sb_token') || '');
